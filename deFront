@@ -1,0 +1,31 @@
+/*
+Given a string, return a version without the first 2 chars. Except keep the first char if it is 'a' and keep the second char if it is 'b'. The string may be any length. Harder than it looks.
+
+
+deFront("Hello") → "llo"
+deFront("java") → "va"
+deFront("away") → "aay" */
+
+public String deFront(String str) {    
+  
+  int l = str.length();
+  String f = str.charAt(0) + "";
+  String se = str.charAt(1) + "";
+  
+  String s = str.substring(2);
+ 
+ if (f.equals("a") && se.equals("b")){
+    return f + se + s;
+  }
+  
+  if(f.equals("a")){
+    s = f + s;
+    return s;
+  }
+  
+  else if (se.equals("b")){
+    s = se + s;
+    return s;
+  }
+ return s;
+}

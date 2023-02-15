@@ -1,0 +1,39 @@
+/*
+Given a string, if one or both of the first 2 chars is 'x', return the string without those 'x' chars, and otherwise return the string unchanged. This is a little harder than it looks.
+
+
+withoutX2("xHi") → "Hi"
+withoutX2("Hxi") → "Hi"
+withoutX2("Hi") → "Hi" */
+
+public String withoutX2(String str) {
+  
+ 
+  if (str.length() == 0){
+    return "";
+  }
+   String d = str.charAt(0) + "";
+  if (str.length() ==1 && d.equals("x")){
+    return "";
+  }
+  
+   String f = str.charAt(0) + "";
+  String se = str.charAt(1) + "";
+  
+  String s = str.substring(2);
+  if(str.length() >=2 ){
+  if (f.equals("x") && se.equals("x")){
+    return s;
+  }
+  
+  else if(f.equals("x")){
+    return se + s;
+  } 
+  
+  else if (se.equals("x")){
+    return f + s;
+  }
+    
+  }
+  return str;
+}

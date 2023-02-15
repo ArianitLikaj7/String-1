@@ -1,0 +1,27 @@
+/*
+Given a string of any length, return a new string where the last 2 chars, if present, are swapped, so "coding" yields "codign".
+
+
+lastTwo("coding") → "codign"
+lastTwo("cat") → "cta"
+lastTwo("ab") → "ba"   */
+
+public String lastTwo(String str) {
+  if (str.length() == 0){
+    return "";
+  }
+  
+  else if (str.length() == 1){
+    return str;
+  }
+  
+  int n = str.length();
+  
+  String f = str.charAt(n-1) + "";
+  String pf = str.charAt(n-2) + "";
+  String s = str.substring(0,n-2);
+  
+  return s + f + pf;
+  
+  
+}
